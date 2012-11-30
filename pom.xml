@@ -134,6 +134,6 @@
 
   <modules>
     <module>perfify-web</module>
-    <module>perfify-maven-plugin</module>
+    <!--<module>perfify-maven-plugin</module>-->
   </modules>
 </project>

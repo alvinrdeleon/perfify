@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 /**
  * This will forward to a pre-GZIP resource when the current request is GZIP encoding supported.
  */
-public class StaticResourceGZIPFilter extends BaseOncePerRequestFilter {
+public class StaticResourceGZIPFilter1 extends BaseOncePerRequestFilter {
 
     /**
      * Regular expression for css and js resource from a request uri

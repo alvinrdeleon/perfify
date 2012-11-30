@@ -11,7 +11,7 @@ import java.util.zip.GZIPOutputStream;
  *
  * @version $Id: $
  */
-public class GZIPResponseStream extends ServletOutputStream {
+public class GZIPResponseStream1 extends ServletOutputStream {
 
     /**
      * Call back when the first bytes is written.
@@ -81,7 +81,7 @@ public class GZIPResponseStream extends ServletOutputStream {
      *
      * @throws IOException on IO error
      */
-    public GZIPResponseStream(HttpServletResponse response, int eagerBufferSize, boolean responseHeadersImmediateFlush) throws IOException {
+    public GZIPResponseStream1(HttpServletResponse response, int eagerBufferSize, boolean responseHeadersImmediateFlush) throws IOException {
         this.response = response;
         this.eagerBufferSize = eagerBufferSize;
         this.responseHeadersImmediateFlush = responseHeadersImmediateFlush;
