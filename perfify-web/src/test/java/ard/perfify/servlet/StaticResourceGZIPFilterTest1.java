@@ -12,14 +12,14 @@ import java.util.Enumeration;
 import static org.mockito.Mockito.*;
 
 /**
- * Test for {@link StaticResourceGZIPFilter1} class.
+ * Test for {@link StaticResourceGZIPFilter} class.
  */
 public class StaticResourceGZIPFilterTest1 {
 
     /**
      * Our test instance
      */
-    private StaticResourceGZIPFilter1 filter;
+    private StaticResourceGZIPFilter filter;
 
     /**
      * mock request
@@ -43,7 +43,7 @@ public class StaticResourceGZIPFilterTest1 {
      */
     @Before
     public void setUp() throws Exception {
-        filter = new StaticResourceGZIPFilter1();
+        filter = new StaticResourceGZIPFilter();
 
         request = mock(HttpServletRequest.class);
         response = mock(HttpServletResponse.class);

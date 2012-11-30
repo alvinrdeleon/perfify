@@ -18,12 +18,12 @@ import java.io.PrintWriter;
  * response to the client.
  *
  */
-public class DynamicResourceGZIPFilter1 extends BaseOncePerRequestFilter {
+public class DynamicResourceGZIPFilter extends BaseOncePerRequestFilter {
 
     /**
      * Logger
      */
-    private static final Logger LOG = Logger.getLogger(DynamicResourceGZIPFilter1.class);
+    private static final Logger LOG = Logger.getLogger(DynamicResourceGZIPFilter.class);
 
     /**
      * turn off GZIP.
@@ -164,10 +164,10 @@ public class DynamicResourceGZIPFilter1 extends BaseOncePerRequestFilter {
                 eagerFlushSize = eagerBufferFlushingSize;
             }
 
-            GZIPResponseStream1 stream = new GZIPResponseStream1(origResponse, eagerFlushSize, responseHeadersImmediateFlush);
+            GZIPResponseStream stream = new GZIPResponseStream(origResponse, eagerFlushSize, responseHeadersImmediateFlush);
 
             // only set the header before the first byte is written to the gzip stream
-            stream.setCallback(new GZIPResponseStream1.StartWriteCallback() {
+            stream.setCallback(new GZIPResponseStream.StartWriteCallback() {
                 public void startWrite() {
                     setHeader("Content-Encoding", "gzip");
                 }

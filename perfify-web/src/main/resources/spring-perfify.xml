@@ -7,10 +7,10 @@
 
   <description>Perfify default spring configuration</description>
 
-  <bean id="perfifyDynamicGZIPFilter" class="ard.perfify.servlet.DynamicResourceGZIPFilter1">
+  <bean id="perfifyDynamicGZIPFilter" class="ard.perfify.servlet.DynamicResourceGZIPFilter">
     <property name="eagerBufferFlushingSize" value="1000"/>
     <property name="responseHeadersImmediateFlush" value="true"/>
   </bean>
 
-  <bean id="perfifyStaticGZIPFilter" class="ard.perfify.servlet.StaticResourceGZIPFilter1"/>
+  <bean id="perfifyStaticGZIPFilter" class="ard.perfify.servlet.StaticResourceGZIPFilter"/>
 </beans>

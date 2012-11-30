@@ -20,14 +20,14 @@ import static org.mockito.Mockito.*;
 
 
 /**
- * Test for {@link DynamicResourceGZIPFilter1} class.
+ * Test for {@link DynamicResourceGZIPFilter} class.
  */
-public class DynamicResourceGZIPFilterTest1 {
+public class DynamicResourceGZIPFilterTest {
 
     /**
      * test filter instance
      */
-    private DynamicResourceGZIPFilter1 filter;
+    private DynamicResourceGZIPFilter filter;
 
     /**
      * mock response
@@ -71,7 +71,7 @@ public class DynamicResourceGZIPFilterTest1 {
      */
     @Before
     public void setUp() throws Exception {
-        filter = new DynamicResourceGZIPFilter1();
+        filter = new DynamicResourceGZIPFilter();
 
         hasMoreElement = true;
         responseOut = new ByteArrayOutputStream();
@@ -198,7 +198,7 @@ public class DynamicResourceGZIPFilterTest1 {
         // so the response passed should not be passed on the chain
         verify(chain, times(0)).doFilter(request, response);
         assertNotSame("filter chain response and filter response should not be the same.", response, filterChainResponse);
-        assertTrue("the servlet output stream should be gzip response stream", GZIPResponseStream1.class.isInstance(filterChainResponse.getOutputStream()));
+        assertTrue("the servlet output stream should be gzip response stream", GZIPResponseStream.class.isInstance(filterChainResponse.getOutputStream()));
     }
 
     /**
@@ -321,7 +321,7 @@ public class DynamicResourceGZIPFilterTest1 {
     }
 
     /**
-     * Call to {@link DynamicResourceGZIPFilter1.GZIPResponseWrapper#setContentLength(int)} method should not be
+     * Call to {@link DynamicResourceGZIPFilter.GZIPResponseWrapper#setContentLength(int)} method should not be
      * delegated to actual response and just be ignored.
      *
      * @throws java.io.IOException on io error
@@ -360,7 +360,7 @@ public class DynamicResourceGZIPFilterTest1 {
     }
 
     /**
-     * Ensure that every call to {@link DynamicResourceGZIPFilter1.GZIPResponseWrapper#getOutputStream()} method
+     * Ensure that every call to {@link DynamicResourceGZIPFilter.GZIPResponseWrapper#getOutputStream()} method
      * should result to the same instance.
      *
      * @throws java.io.IOException on io error
@@ -385,7 +385,7 @@ public class DynamicResourceGZIPFilterTest1 {
     }
 
     /**
-     * Ensure that every call to {@link DynamicResourceGZIPFilter1.GZIPResponseWrapper#getWriter()} method
+     * Ensure that every call to {@link DynamicResourceGZIPFilter.GZIPResponseWrapper#getWriter()} method
      * should result to the same instance.
      *
      * @throws java.io.IOException on io error
