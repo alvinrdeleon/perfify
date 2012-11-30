@@ -22,7 +22,7 @@ import static org.mockito.Mockito.*;
 /**
  * Test for {@link DynamicResourceGZIPFilter1} class.
  */
-public class DynamicResourceGZIPFilterTest {
+public class DynamicResourceGZIPFilterTest1 {
 
     /**
      * test filter instance

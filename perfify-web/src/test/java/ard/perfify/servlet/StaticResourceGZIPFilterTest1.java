@@ -14,7 +14,7 @@ import static org.mockito.Mockito.*;
 /**
  * Test for {@link StaticResourceGZIPFilter1} class.
  */
-public class StaticResourceGZIPFilterTest {
+public class StaticResourceGZIPFilterTest1 {
 
     /**
      * Our test instance
